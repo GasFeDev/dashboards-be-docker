@@ -10,12 +10,8 @@ dotenv.config();
 
 const app: Application = express();
 const port = process.env.PORT || 4000;
-/* const origins = process.env.CORS_ORIGIN || ""; */
-/* const corsOptions = process.env.ENV === 'DEV' ? ["http://localhost:3000","http://localhost:3001"]: origins.split(','); */
-
-//En produccion
-const origins = "https://uat-dega.org%2Chttps//www.uat-dega.org,https://rewards.uat-dega.org,https://www.rewards.uat-dega.org"
-const corsOptions = origins.split(','); 
+const origins = "https://dashboards-fe-docker.onrender.com";
+const corsOptions = /* process.env.ENV === 'DEV' ? ["http://localhost:3000","http://localhost:3001"]:  */origins.split(',');
 
 const allowlist = [...corsOptions];
 
