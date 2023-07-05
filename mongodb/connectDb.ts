@@ -15,7 +15,7 @@ const cloudurl = `${DB}${USER}:${PASSWORD}@${HOST}/${DB_MECHANISM}`;
 /* const dbUrl = DB_NAME === "local" ? `${DB}${USER}:${PASSWORD}@${HOST}:${PORT}/?authMechanism=DEFAULT` : cloudurl; */
 
 //MongoDB Atlass
-const dbUrl = "mongodb+srv://gasfedev:Rogerfederer1234@gasfedev.lnp8omz.mongodb.net/?retryWrites=true&w=majority"
+const dbUrl = "mongodb+srv://gasfedev:Rogerfederer1234@gasfedev.lnp8omz.mongodb.net/test?retryWrites=true&w=majority";
 
 
 console.log("DBURL", dbUrl);
