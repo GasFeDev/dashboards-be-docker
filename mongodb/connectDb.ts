@@ -23,7 +23,7 @@ console.log("DBURL", dbUrl);
 const connectDb = async () => {
   try {
     mongoose.set("strictQuery", false);
-    const mongoDbConnection = await mongoose.connect(dbUrl);
+    const mongoDbConnection = await mongoose.connect(dbUrl, { serverSelectionTimeoutMS: 20000 });
     if (mongoDbConnection.connection.readyState === 1) {
       console.log("Connection success");
     } else {
