@@ -4,6 +4,7 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const DB = process.env.MONGO_DB || "mongodb://";
+const MONGO_DB_ATLAS = process.env.MONGO_DB_ATLAS;
 const USER = process.env.MONGODB_USERNAME || "";
 const PASSWORD = encodeURIComponent(process.env.MONGO_INITDB_ROOT_PASSWORD || "");
 const DB_NAME = process.env.MONGODB_DATABASE_NAME || "";
@@ -15,7 +16,7 @@ const cloudurl = `${DB}${USER}:${PASSWORD}@${HOST}/${DB_MECHANISM}`;
 /* const dbUrl = DB_NAME === "local" ? `${DB}${USER}:${PASSWORD}@${HOST}:${PORT}/?authMechanism=DEFAULT` : cloudurl; */
 
 //MongoDB Atlass
-const dbUrl = "mongodb+srv://gasfedev:Rogerfederer1234@gasfedev.lnp8omz.mongodb.net/test?retryWrites=true&w=majority";
+const dbUrl = `${MONGO_DB_ATLAS}`;
 
 
 console.log("DBURL", dbUrl);
